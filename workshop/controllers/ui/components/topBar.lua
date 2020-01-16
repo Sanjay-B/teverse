@@ -27,8 +27,8 @@ local tabs = {
         shared.windows.settings.visible = not shared.windows.settings.visible
       end},
       {"Seperator"},
-      {"Script Editor", "fa:s-scroll", function ()
-         shared.windows.scriptEditor.visible = not shared.windows.settings.visible
+      {"sEditor", "fa:s-scroll", function ()
+         shared.windows.scriptEditor.visible = not shared.windows.scriptEditor.visible
       end},
       {"Test", "fa:s-satellite-dish", function ()
          if not shared.workshop.gameFilePath or shared.workshop.gameFilePath == "" then
