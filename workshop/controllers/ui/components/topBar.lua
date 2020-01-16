@@ -29,8 +29,9 @@ local tabs = {
       {"Seperator"},
       {"sEditor", "fa:s-scroll", function ()
          shared.windows.scriptEditor.visible = not shared.windows.scriptEditor.visible
+         shared.workshop.interface["_toolBar"].visible = not shared.workshop.interface["_toolBar"].visible
       end},
-      {"Test", "fa:s-satellite-dish", function ()
+      {"Test", "fa:s-play-circle", function ()
          if not shared.workshop.gameFilePath or shared.workshop.gameFilePath == "" then
             ui.prompt("Please save this game before testing.")
          else
