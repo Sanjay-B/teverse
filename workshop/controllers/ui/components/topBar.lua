@@ -26,6 +26,10 @@ local tabs = {
       {"Settings", "fa:s-cog", function ()
         shared.windows.settings.visible = not shared.windows.settings.visible
       end},
+      {"Seperator"},
+      {"Script Editor", "fa:s-scroll", function ()
+         shared.windows.scriptEditor.visible = not shared.windows.settings.visible
+      end},
       {"Test", "fa:s-satellite-dish", function ()
          if not shared.workshop.gameFilePath or shared.workshop.gameFilePath == "" then
             ui.prompt("Please save this game before testing.")
