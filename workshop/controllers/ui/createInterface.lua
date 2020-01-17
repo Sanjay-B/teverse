@@ -21,6 +21,9 @@ shared.windows.hierarchy = require("tevgit:workshop/controllers/ui/components/hi
 shared.windows.history = require("tevgit:workshop/controllers/ui/components/historyUi.lua")
 shared.windows.history.visible = false
 
+shared.windows.scriptEditor = require("tevgit:workshop/controllers/ui/components/scriptEditor/window.lua").window
+shared.windows.scriptEditor.visible = false
+
 require("tevgit:workshop/controllers/ui/core/dock.lua").loadDockSettings()
 
 if not shared.developerMode then

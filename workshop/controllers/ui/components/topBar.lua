@@ -27,7 +27,7 @@ local tabs = {
         shared.windows.settings.visible = not shared.windows.settings.visible
       end},
       {"Seperator"},
-      {"sEditor", "fa:s-scroll", function ()
+      {"Editor", "fa:s-scroll", function ()
          shared.windows.scriptEditor.visible = not shared.windows.scriptEditor.visible
          shared.workshop.interface["_toolBar"].visible = not shared.workshop.interface["_toolBar"].visible
       end},

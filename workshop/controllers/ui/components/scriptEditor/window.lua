@@ -5,13 +5,28 @@ local shared = require("tevgit:workshop/controllers/shared.lua")
 
 controller.eventHandlers = {}
 
+-- engine.construct("script", engine.assets.lua.shared) -- create script instance
+-- script:editExternal() -- open script instance in text editor
+
 local modulePrefix = "tevgit:workshop/controllers/ui/components/scriptEditor/"
 
-controller.window = ui.window(shared.workshop.interface, "scriptEditor",
-    guiCoord(0, 500, 0, 400),
-    guiCorrd(1, -260, 0.5, -25),
-    true, -- can be docked
-    true -- can be hidden
+controller.window = ui.window(shared.workshop.interface, "Script Editor",
+    guiCoord(0.835, 0, 1, 0),
+    guiCoord(0, 0, 0.091, 0),
+    false, -- can be docked
+    false, -- can be hidden
+    false -- can be dragable
 )
+
+local container = ui.create("guiFrame", controller.window.content, {
+    size = guiCoord(0, 0, 0, -18),
+    position = guiCoord(0, 0, 0, 18)
+}, "background")
+
+container:mouseLeftPressed(function ()
+    print("PRESSED CONTAINER BODY")
+end)
+
+
 
 return controller
