@@ -82,9 +82,6 @@ return {
             name = title,
             position = position,
             cropChildren = false,
-            borderColour = colour:fromRGB(55, 59, 64),
-            borderWidth = 2,
-            borderAlpha = 1,
         }, themer.types.background)
 
         container:on("changed", function (property, value)
@@ -96,7 +93,7 @@ return {
         local titleBar = create("guiFrame", container, {
             name = "titleBar",
             position = guiCoord(0, -1, 0, -4),
-            size = guiCoord(1, 2, 0, 25),
+            size = guiCoord(0.92, 0, 0, 25),
             borderRadius = 0,
             hoverCursor = "fa:s-hand-pointer"
         }, themer.types.primary)
@@ -119,15 +116,18 @@ return {
             text = title,
             handleEvents = false
         }, themer.types.primaryText)
+        --}, themer.types.cleanSlate)
 
         if closable then
-            local closeBtn = create("guiImage", titleBar, {
-                position = guiCoord(1, -22, 0, 3),
-                size = guiCoord(0, 19, 0, 19),
-                texture = "fa:s-window-close",
-                imageAlpha = 0.5,
+            --local closeBtn = create("guiImage", titleBar, {
+            local closeBtn = create("guiButton", container, {
+                position = guiCoord(0.918, 0, 0, -4),
+                size = guiCoord(0, 23, 0, 25),
+                fontSize = 15,
+                text = " X",
+                align = enums.align.middle,
                 hoverCursor = "fa:s-hand-pointer"
-            }, "primaryImage")
+            }, "error")
 
             closeBtn:mouseLeftReleased(function ()
                 container.visible = false

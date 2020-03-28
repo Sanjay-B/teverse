@@ -16,13 +16,13 @@ info = ui.create("guiTextBox", controller.window.content, {
     size = guiCoord(1, 0, 0, 18),
     text = "Nothing selected",
     fontSize = 18
-}, "backgroundText")
+}, "secondaryText")
 
 controller.scrollView = ui.create("guiScrollView", controller.window.content, {
     size = guiCoord(1, 0, 1, -18),
     position = guiCoord(0, 0, 0, 18),
     backgroundAlpha = 0
-}, "primary")
+}, "secondaryText")
 
 controller.eventHandlers = {}
 
@@ -83,7 +83,7 @@ function controller.generateProperties()
                     borderAlpha = 0,
                     text = v.property,
                     align = enums.align.topRight
-                }, "backgroundText")
+                }, "secondaryText")
 
                 local inputGui = nil
 

@@ -14,7 +14,7 @@ return {
 
 		local basePlate = engine.construct("block", workspace, {
 			name           = "basePlate",
-			colour         = colour(0.9, 0.9, 0.9),
+			colour         = colour:fromRGB(66, 66, 66),
 			size           = vector3(100, 1, 100),
 			position       = vector3(0, -1, 0),
 			workshopLocked = true
@@ -38,8 +38,8 @@ return {
 	end,
 
 	setupEnvironment = function ()
-		engine.graphics.clearColour = colour:fromRGB(56,56,66)
-		engine.graphics.ambientColour = colour(0.3, 0.3, 0.3)
+		--engine.graphics.clearColour = colour(1,1,1)
+		engine.graphics.ambientColour = colour:fromRGB(128, 128, 128)
 	end,
 
 	createPBRDebugSpheres = function ()

@@ -99,7 +99,7 @@ local function createHierarchyButton(object, guiParent)
         cropChildren = false,
         backgroundAlpha = 0,
         hoverCursor = "fa:s-hand-pointer"
-    }, "backgroundText")
+    }, "secondaryText")
 
     buttonToObject[btn] = object
 
@@ -110,7 +110,7 @@ local function createHierarchyButton(object, guiParent)
         size = guiCoord(0, 16, 0, 16),
         handleEvents = false,
         backgroundAlpha = 0
-    })
+    }, "primaryImage")
 
     local expanded = false
     local lastClick = 0

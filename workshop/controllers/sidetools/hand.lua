@@ -49,7 +49,7 @@ return {
             borderRadius = 4,
             align = enums.align.middle,
             readOnly = false
-        }, "primaryVariant")
+        }, "secondaryText")
 
         gridStepInput:on("changed", function()
             gridStep = tonumber(gridStepInput.text) or 0 
@@ -133,10 +133,8 @@ return {
                                 for _,v in pairs(hits) do
                                     if v.object.name ~= "_CreateMode_" then
                                         hit = v
-                                        goto skip
                                     end
                                 end
-                                ::skip::
 
                                 local newCentre = hit.hitPosition - mouseOffset
                                 if gridStep ~= 0 then

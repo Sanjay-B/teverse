@@ -30,14 +30,14 @@ local function toggleTool(toolName)
    if activeTool ~= toolName then
       if activeTool then
          tools[activeTool].deactivate()
-         tools[activeTool].gui.icon.imageAlpha = 0.75
+         tools[activeTool].gui.icon.imageAlpha = 1
       end
       tools[toolName].activate()
-      tools[toolName].gui.icon.imageAlpha = 1
+      tools[toolName].gui.icon.imageAlpha = 0.75
       activeTool = toolName
    else
       tools[activeTool].deactivate()
-      tools[activeTool].gui.icon.imageAlpha = 0.75
+      tools[activeTool].gui.icon.imageAlpha = 1
       activeTool = nil
    end
 end
@@ -66,10 +66,10 @@ for toolName, options in pairs(tools) do
       ui.create("guiImage", newTabBtn, {
          name = "icon",
          size = guiCoord(1, 0, 1, 0),
-         position = guiCoord(0, 0, 0., 0),
+         position = guiCoord(0, 0, 0, 0),
          texture = options.icon,
          handleEvents = false,
-         imageAlpha = 0.75
+         imageAlpha = 1
       }, "primaryImage")
    end
 

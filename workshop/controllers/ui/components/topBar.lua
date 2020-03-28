@@ -130,7 +130,7 @@ for tabName, options in pairs(tabs) do
            handleEvents = false,
            align = enums.align.middle,
            fontSize = 15
-        }, "primaryText")
+        }, "primaryVariant")
 
         xpos = xpos + 62
     end
@@ -139,9 +139,11 @@ for tabName, options in pairs(tabs) do
    newTabBtn:mouseLeftPressed(function ()
       for btn, submenu in pairs(guiTabs) do
          btn.backgroundAlpha = 0
+         btn.textColour = colour:fromRGB(255, 255, 255)
          submenu.visible = false
       end
       newSubMenu.visible = true
+      newTabBtn.textColour = colour:fromRGB(0, 0, 0)
       newTabBtn.backgroundAlpha = 1
    end)
 

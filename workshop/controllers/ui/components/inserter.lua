@@ -99,7 +99,7 @@ for _, options in pairs(adders) do
          position = guiCoord(0, 0, 0., 0),
          texture = options.icon,
          handleEvents = false,
-         imageAlpha = 0.75
+         imageAlpha = 1
       }, "primaryImage")
    end
 
